@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sp.base</groupId>
+    <artifactId>sp-base-dependencies</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <description>SuperSpace基础依赖包定义集合</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>2.1.11.RELEASE</spring-boot.version>
+        <fastjson.version>1.2.60</fastjson.version>
+        <lombok.version>1.16.18</lombok.version>
+        <gson.version>2.8.6</gson.version>
+        <mysql.version>8.0.22</mysql.version>
+        <caffeine.version>2.8.8</caffeine.version>
+        <mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
+        <mybatis-plus-boot-starter.version>3.4.3.1</mybatis-plus-boot-starter.version>
+        <mybatis-plus-generator.version>3.5.0</mybatis-plus-generator.version>
+        <mybatis-plus-annotation.version>3.4.3.1</mybatis-plus-annotation.version>
+        <mybatis-plus-join.version>1.2.0-SNAPSHOT</mybatis-plus-join.version>
+        <druid.version>1.1.10</druid.version>
+        <persistence-api.version>1.0</persistence-api.version>
+        <apollo.version>1.4.0</apollo.version>
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+        <spring-cloud-context.version>2.2.2.RELEASE</spring-cloud-context.version>
+        <consul-discovery.version>2.1.5.RELEASE</consul-discovery.version>
+        <netflix-hystrix.version>2.1.5.RELEASE</netflix-hystrix.version>
+        <openfeign.version>2.1.5.RELEASE</openfeign.version>
+        <json-lib.version>2.4</json-lib.version>
+        <version.slf4j>2.11.2</version.slf4j>
+        <guava.version>25.0-jre</guava.version>
+        <swagger2.version>3.0.0</swagger2.version>
+        <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+        <springfox.version>3.0.0</springfox.version>
+        <swagger-annotations.version>1.5.20</swagger-annotations.version>
+        <springdoc-openapi-ui.version>1.5.10</springdoc-openapi-ui.version>
+        <knife4j-spring-boot-starter.version>3.0.2</knife4j-spring-boot-starter.version>
+        <dozer.version>5.5.1</dozer.version>
+        <mockito-core.version>2.8.9</mockito-core.version>
+        <powermock.version>1.7.3</powermock.version>
+        <powermock-api-mockito2.version>1.7.3</powermock-api-mockito2.version>
+        <powermock-module-junit4.version>1.7.3</powermock-module-junit4.version>
+        <mockito-core.version>2.8.9</mockito-core.version>
+        <spring-cloud-gateway.version>2.1.5.RELEASE</spring-cloud-gateway.version>
+        <json-simple.version>1.1.1</json-simple.version>
+        <springfox-bean-validators.version>3.0.0</springfox-bean-validators.version>
+        <micrometer.version>1.6.2</micrometer.version>
+        <apache-commons-csv.version>1.5</apache-commons-csv.version>
+        <archaius-core.version>0.7.7</archaius-core.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+        <commons.lang3.version>3.9</commons.lang3.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.io.version>2.5</commons.io.version>
+        <jetbrains.annotations.version>22.0.0</jetbrains.annotations.version>
+        <dubbo.version>2.5.5</dubbo.version>
+        <spring-context-support.version>5.0.9.RELEASE</spring-context-support.version>
+        <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
+        <spring-webmvc.version>5.1.12.RELEASE</spring-webmvc.version>
+
+        <!-- 公共组件版本定义 -->
+        <yh-infra-common-lib.version>1.0.0-SNAPSHOT</yh-infra-common-lib.version>
+        <yh-lark-common.version>1.0.0-SNAPSHOT</yh-lark-common.version>
+        <yh-lark-orm.version>1.0.0-SNAPSHOT</yh-lark-orm.version>
+        <yh-lark-tool.version>1.0.0-SNAPSHOT</yh-lark-tool.version>
+        <yh-infra-common-redis.version>1.0.0-SNAPSHOT</yh-infra-common-redis.version>
+        <skywalking-client.version>8.4.0</skywalking-client.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <cas-client-spring-boot-starter.version>1.0.0</cas-client-spring-boot-starter.version>
+        <yh-infra-common-web.version>1.0.0-SNAPSHOT</yh-infra-common-web.version>
+        <yh-common-utilities.version>1.0.0-SNAPSHOT</yh-common-utilities.version>
+        <yh.infra.comp.version>1.0.0-SNAPSHOT</yh.infra.comp.version>
+        <yh-middleware-dependencies.version>1.2.20.1</yh-middleware-dependencies.version>
+
+        <!-- 服务治理相关组件版本定义 -->
+        <yh-infra-svc-gov-sdk.version>1.0.0-SNAPSHOT</yh-infra-svc-gov-sdk.version>
+        <yh-infra-consul-retry-client.version>1.0.0-RELEASE</yh-infra-consul-retry-client.version>
+        <yh-infra-metrics-client.version>1.0.0-SNAPSHOT</yh-infra-metrics-client.version>
+        <arch-web-sc-interfaces-list.version>1.5.0-SNAPSHOT</arch-web-sc-interfaces-list.version>
+        <dubbo-extension-svcls.version>1.5.0-SNAPSHOT</dubbo-extension-svcls.version>
+        <yh-degration-sdk.version>1.0.0-SNAPSHOT</yh-degration-sdk.version>
+        <yh-flow-dyeing-sdk.version>1.0.0-SNAPSHOT</yh-flow-dyeing-sdk.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ========== Spring原生相关依赖包 ========== -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring-context-support.version}</version>
+            </dependency>
+
+            <!-- ========== SpringMVC & Springboot相关依赖包 ========== -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-webmvc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ========== Spring Cloud相关依赖包 ========== -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>${netflix-hystrix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${openfeign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${spring-cloud-gateway.version}</version>
+            </dependency>
+
+            <!-- ========== Dubbo相关依赖包 ========== -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <!-- ========== 其它 ========== -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax-servlet-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons.lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
+
+            <!-- 序列化组件依赖包 -->
+            <dependency>
+                <groupId>net.sf.json-lib</groupId>
+                <artifactId>json-lib</artifactId>
+                <version>${json-lib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>${json-simple.version}</version>
+            </dependency>
+
+            <!-- Apollo客户端依赖包 -->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
+
+            <!-- ========== UT框架Mockito ========== -->
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock-api-mockito2.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock-module-junit4.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.json-lib</groupId>
+                <artifactId>json-lib</artifactId>
+                <version>${json-lib.version}</version>
+                <classifier>jdk15</classifier>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${jetbrains.annotations.version}</version>
+            </dependency>
+
+            <!-- ========== 数据库操作关联依赖 ========== -->
+            <!-- Mysql数据库驱动包 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- 数据源依赖包 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- Mybatis相关依赖包 -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>2.1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.yulichang</groupId>
+                <artifactId>mybatis-plus-join</artifactId>
+                <version>${mybatis-plus-join.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>1.3.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.miemiedev</groupId>
+                <artifactId>mybatis-paginator</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+
+            <!-- Mybatis-Plus相关依赖包-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus-annotation.version}</version>
+            </dependency>
+
+            <!-- ========== 本地缓存包 ========== -->
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>${caffeine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- ========== API管理工具 ========== -->
+            <!--单独依赖Swagger相关包 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+
+            <!--Springboot依赖Swagger相关包(适用于Springboot 2.2.0以上) -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-springdoc-ui</artifactId>
+                <version>${knife4j-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc-openapi-ui.version}</version>
+            </dependency>
+
+            <!-- ========== Dozer工具依赖 ========== -->
+            <dependency>
+                <groupId>net.sf.dozer</groupId>
+                <artifactId>dozer</artifactId>
+                <version>${dozer.version}</version>
+            </dependency>
+
+            <!-- ========== log4j2日志包依赖 ========== -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+
+            <!-- Skywalking日志桥接组件 -->
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-log4j-2.x</artifactId>
+                <version>${skywalking-client.version}</version>
+            </dependency>
+
+            <!-- 其它工具组件 -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <!-- ========== 服务治理相关组件 ========== -->
+            <!-- 服务治理SDK,接入手册:http://public-service.confluence.gw.yonghui.cn/pages/viewpage.action?pageId=32390021 -->
+            <dependency>
+                <groupId>com.yh.infra.svc.gov</groupId>
+                <artifactId>yh-infra-svc-gov-sdk</artifactId>
+                <version>${yh-infra-svc-gov-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yh.infra.svc.gov</groupId>
+                <artifactId>yh-infra-svc-gov-sdk-starter</artifactId>
+                <version>${yh-infra-svc-gov-sdk.version}</version>
+            </dependency>
+
+            <!-- Consul服务重试策略包 -->
+            <dependency>
+                <groupId>com.yh.infra.svc.gov</groupId>
+                <artifactId>yh-infra-consul-retry-starter</artifactId>
+                <version>${yh-infra-consul-retry-client.version}</version>
+            </dependency>
+            <!-- 永辉Metrics客户端组件 -->
+            <dependency>
+                <groupId>com.yh.infra.svc.gov</groupId>
+                <artifactId>yh-infra-metrics-client-boot</artifactId>
+                <version>${yh-infra-metrics-client.version}</version>
+            </dependency>
+
+            <!-- http接口采集组件 -->
+            <dependency>
+                <groupId>com.yonghui</groupId>
+                <artifactId>arch-web-springcloud-interfaces-list</artifactId>
+                <version>${arch-web-sc-interfaces-list.version}</version>
+            </dependency>
+            <!-- dubbo接口采集组件 -->
+            <dependency>
+                <groupId>com.yonghui</groupId>
+                <artifactId>dubbo-extension-svcls</artifactId>
+                <version>${dubbo-extension-svcls.version}</version>
+            </dependency>
+
+            <!--限流/降级组件-->
+            <dependency>
+                <groupId>com.yh.infra.degration</groupId>
+                <artifactId>yh-infra-degration-rest-boot-starter</artifactId>
+                <version>${yh-degration-sdk.version}</version>
+            </dependency>
+
+            <!--灰度/染色组件-->
+            <dependency>
+                <groupId>com.yh.infra.flow.dyeing</groupId>
+                <artifactId>yh-flow-dyeing-starter</artifactId>
+                <version>${yh-flow-dyeing-sdk.version}</version>
+            </dependency>
+
+            <!--永辉公共规范库组件-->
+            <dependency>
+                <groupId>com.yh.infra.common</groupId>
+                <artifactId>yh-infra-common-lib</artifactId>
+                <version>${yh-infra-common-lib.version}</version>
+            </dependency>
+            <!-- 永辉公共redis组件 -->
+            <dependency>
+                <groupId>com.yh.infra.common</groupId>
+                <artifactId>yh-infra-common-redis</artifactId>
+                <version>${yh-infra-common-redis.version}</version>
+            </dependency>
+            <!-- 永辉公共Web组件 -->
+            <dependency>
+                <groupId>com.yh.infra.common</groupId>
+                <artifactId>yh-infra-common-web</artifactId>
+                <version>${yh-infra-common-web.version}</version>
+            </dependency>
+            <!-- 永辉CAS统一身份认证接入组件 -->
+            <dependency>
+                <groupId>com.cas.starter</groupId>
+                <artifactId>cas-client-spring-boot-starter</artifactId>
+                <version>${cas-client-spring-boot-starter.version}</version>
+            </dependency>
+            <!-- 永辉公共工具包 -->
+            <dependency>
+                <groupId>com.yh.common.utilities</groupId>
+                <artifactId>yh-common-utilities</artifactId>
+                <version>${yh-common-utilities.version}</version>
+            </dependency>
+            <!-- 永辉自定义ORM框架-lark -->
+            <dependency>
+                <groupId>com.yh.common</groupId>
+                <artifactId>yh-lark-common</artifactId>
+                <version>${yh-lark-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yh.common</groupId>
+                <artifactId>yh-lark-orm</artifactId>
+                <version>${yh-lark-orm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yh.common</groupId>
+                <artifactId>yh-lark-tool</artifactId>
+                <version>${yh-lark-tool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://129.211.33.206:8088/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://129.211.33.206:8088/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://129.211.33.206:8088/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
