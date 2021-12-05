@@ -61,29 +61,29 @@
         <spring-context-support.version>5.0.9.RELEASE</spring-context-support.version>
         <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
         <spring-webmvc.version>5.1.12.RELEASE</spring-webmvc.version>
-
-        <!-- 公共组件版本定义 -->
-        <yh-infra-common-lib.version>1.0.0-SNAPSHOT</yh-infra-common-lib.version>
-        <yh-lark-common.version>1.0.0-SNAPSHOT</yh-lark-common.version>
-        <yh-lark-orm.version>1.0.0-SNAPSHOT</yh-lark-orm.version>
-        <yh-lark-tool.version>1.0.0-SNAPSHOT</yh-lark-tool.version>
-        <yh-infra-common-redis.version>1.0.0-SNAPSHOT</yh-infra-common-redis.version>
         <skywalking-client.version>8.4.0</skywalking-client.version>
         <jjwt.version>0.9.1</jjwt.version>
         <cas-client-spring-boot-starter.version>1.0.0</cas-client-spring-boot-starter.version>
-        <yh-infra-common-web.version>1.0.0-SNAPSHOT</yh-infra-common-web.version>
-        <yh-common-utilities.version>1.0.0-SNAPSHOT</yh-common-utilities.version>
-        <yh.infra.comp.version>1.0.0-SNAPSHOT</yh.infra.comp.version>
-        <yh-middleware-dependencies.version>1.2.20.1</yh-middleware-dependencies.version>
+
+        <!-- 公共组件版本定义 -->
+        <sp-framework-common.version>1.0.0-SNAPSHOT</sp-framework-common.version>
+        <sp-framework-lark-common.version>1.0.0-SNAPSHOT</sp-framework-lark-common.version>
+        <sp-framework-lark-orm.version>1.0.0-SNAPSHOT</sp-framework-lark-orm.version>
+        <sp-framework-lark-tool.version>1.0.0-SNAPSHOT</sp-framework-lark-tool.version>
+        <sp-framework-redis.version>1.0.0-SNAPSHOT</sp-framework-redis.version>
+        <sp-framework-web.version>1.0.0-SNAPSHOT</sp-framework-web.version>
+        <sp-framework-utilities.version>1.0.0-SNAPSHOT</sp-framework-utilities.version>
+<!--        <sp-middleware-dependencies.version>1.2.20.1</sp-middleware-dependencies.version>-->
 
         <!-- 服务治理相关组件版本定义 -->
-        <yh-infra-svc-gov-sdk.version>1.0.0-SNAPSHOT</yh-infra-svc-gov-sdk.version>
-        <yh-infra-consul-retry-client.version>1.0.0-RELEASE</yh-infra-consul-retry-client.version>
-        <yh-infra-metrics-client.version>1.0.0-SNAPSHOT</yh-infra-metrics-client.version>
-        <arch-web-sc-interfaces-list.version>1.5.0-SNAPSHOT</arch-web-sc-interfaces-list.version>
-        <dubbo-extension-svcls.version>1.5.0-SNAPSHOT</dubbo-extension-svcls.version>
-        <yh-degration-sdk.version>1.0.0-SNAPSHOT</yh-degration-sdk.version>
-        <yh-flow-dyeing-sdk.version>1.0.0-SNAPSHOT</yh-flow-dyeing-sdk.version>
+        <sp-infra-svc-gov-sdk.version>1.0.0-SNAPSHOT</sp-infra-svc-gov-sdk.version>
+        <sp-infra-consul-retry-client.version>1.0.0-SNAPSHOT</sp-infra-consul-retry-client.version>
+        <sp-infra-metrics-client.version>1.0.0-SNAPSHOT</sp-infra-metrics-client.version>
+        <arch-web-sc-interfaces-list.version>1.0.0-SNAPSHOT</arch-web-sc-interfaces-list.version>
+        <dubbo-extension-svcls.version>1.0.0-SNAPSHOT</dubbo-extension-svcls.version>
+        <sp-degration-sdk.version>1.0.0-SNAPSHOT</sp-degration-sdk.version>
+        <sp-flow-dyeing-sdk.version>1.0.0-SNAPSHOT</sp-flow-dyeing-sdk.version>
+        <sp-traffic-core-center.version>1.0.0-SNAPSHOT</sp-traffic-core-center.version>
     </properties>
 
     <dependencyManagement>
@@ -139,6 +139,15 @@
                 <artifactId>dubbo</artifactId>
                 <version>${dubbo.version}</version>
             </dependency>
+
+            <!-- ========== SuperSpace中间件相关依赖包 ========== -->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.mid</groupId>-->
+<!--                <artifactId>sp-middleware-dependencies</artifactId>-->
+<!--                <version>${sp-middleware-dependencies.version}</version>-->
+<!--                <scope>import</scope>-->
+<!--                <type>pom</type>-->
+<!--            </dependency>-->
 
             <!-- ========== 其它 ========== -->
             <dependency>
@@ -389,132 +398,132 @@
             </dependency>
 
             <!-- ========== 服务治理相关组件 ========== -->
-            <!-- 服务治理SDK,接入手册:http://public-service.confluence.gw.yonghui.cn/pages/viewpage.action?pageId=32390021 -->
-            <dependency>
-                <groupId>com.yh.infra.svc.gov</groupId>
-                <artifactId>yh-infra-svc-gov-sdk</artifactId>
-                <version>${yh-infra-svc-gov-sdk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.yh.infra.svc.gov</groupId>
-                <artifactId>yh-infra-svc-gov-sdk-starter</artifactId>
-                <version>${yh-infra-svc-gov-sdk.version}</version>
-            </dependency>
+<!--            &lt;!&ndash; 服务治理SDK,接入手册: &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.svc.gov</groupId>-->
+<!--                <artifactId>sp-infra-svc-gov-sdk</artifactId>-->
+<!--                <version>${sp-infra-svc-gov-sdk.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.svc.gov</groupId>-->
+<!--                <artifactId>sp-infra-svc-gov-sdk-starter</artifactId>-->
+<!--                <version>${sp-infra-svc-gov-sdk.version}</version>-->
+<!--            </dependency>-->
 
-            <!-- Consul服务重试策略包 -->
-            <dependency>
-                <groupId>com.yh.infra.svc.gov</groupId>
-                <artifactId>yh-infra-consul-retry-starter</artifactId>
-                <version>${yh-infra-consul-retry-client.version}</version>
-            </dependency>
-            <!-- 永辉Metrics客户端组件 -->
-            <dependency>
-                <groupId>com.yh.infra.svc.gov</groupId>
-                <artifactId>yh-infra-metrics-client-boot</artifactId>
-                <version>${yh-infra-metrics-client.version}</version>
-            </dependency>
+<!--            &lt;!&ndash; Consul服务重试策略包 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.svc.gov</groupId>-->
+<!--                <artifactId>sp-infra-consul-retry-starter</artifactId>-->
+<!--                <version>${sp-infra-consul-retry-client.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; SuperSpaceMetrics客户端组件 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.svc.gov</groupId>-->
+<!--                <artifactId>sp-infra-metrics-client-boot</artifactId>-->
+<!--                <version>${sp-infra-metrics-client.version}</version>-->
+<!--            </dependency>-->
 
-            <!-- http接口采集组件 -->
-            <dependency>
-                <groupId>com.yonghui</groupId>
-                <artifactId>arch-web-springcloud-interfaces-list</artifactId>
-                <version>${arch-web-sc-interfaces-list.version}</version>
-            </dependency>
-            <!-- dubbo接口采集组件 -->
-            <dependency>
-                <groupId>com.yonghui</groupId>
-                <artifactId>dubbo-extension-svcls</artifactId>
-                <version>${dubbo-extension-svcls.version}</version>
-            </dependency>
+<!--            &lt;!&ndash; http接口采集组件 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.yh.infra.comp</groupId>-->
+<!--                <artifactId>arch-web-springcloud-interfaces-list</artifactId>-->
+<!--                <version>${arch-web-sc-interfaces-list.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; dubbo接口采集组件 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.yh.infra.comp</groupId>-->
+<!--                <artifactId>dubbo-extension-svcls</artifactId>-->
+<!--                <version>${dubbo-extension-svcls.version}</version>-->
+<!--            </dependency>-->
 
-            <!--限流/降级组件-->
+            <!--SuperSpace公共规范库组件-->
             <dependency>
-                <groupId>com.yh.infra.degration</groupId>
-                <artifactId>yh-infra-degration-rest-boot-starter</artifactId>
-                <version>${yh-degration-sdk.version}</version>
+                <groupId>com.sp.framework</groupId>
+                <artifactId>sp-framework-common</artifactId>
+                <version>${sp-framework-common.version}</version>
             </dependency>
-
-            <!--灰度/染色组件-->
+            <!-- SuperSpace公共redis组件 -->
             <dependency>
-                <groupId>com.yh.infra.flow.dyeing</groupId>
-                <artifactId>yh-flow-dyeing-starter</artifactId>
-                <version>${yh-flow-dyeing-sdk.version}</version>
+                <groupId>com.sp.framework</groupId>
+                <artifactId>sp-framework-redis</artifactId>
+                <version>${sp-framework-redis.version}</version>
             </dependency>
-
-            <!--永辉公共规范库组件-->
+            <!-- SuperSpace公共Web组件 -->
             <dependency>
-                <groupId>com.yh.infra.common</groupId>
-                <artifactId>yh-infra-common-lib</artifactId>
-                <version>${yh-infra-common-lib.version}</version>
+                <groupId>com.sp.framework</groupId>
+                <artifactId>sp-framework-web</artifactId>
+                <version>${sp-framework-web.version}</version>
             </dependency>
-            <!-- 永辉公共redis组件 -->
-            <dependency>
-                <groupId>com.yh.infra.common</groupId>
-                <artifactId>yh-infra-common-redis</artifactId>
-                <version>${yh-infra-common-redis.version}</version>
-            </dependency>
-            <!-- 永辉公共Web组件 -->
-            <dependency>
-                <groupId>com.yh.infra.common</groupId>
-                <artifactId>yh-infra-common-web</artifactId>
-                <version>${yh-infra-common-web.version}</version>
-            </dependency>
-            <!-- 永辉CAS统一身份认证接入组件 -->
+            <!-- SuperSpace CAS统一身份认证接入组件 -->
             <dependency>
                 <groupId>com.cas.starter</groupId>
                 <artifactId>cas-client-spring-boot-starter</artifactId>
                 <version>${cas-client-spring-boot-starter.version}</version>
             </dependency>
-            <!-- 永辉公共工具包 -->
+            <!-- SuperSpace公共工具包 -->
             <dependency>
-                <groupId>com.yh.common.utilities</groupId>
-                <artifactId>yh-common-utilities</artifactId>
-                <version>${yh-common-utilities.version}</version>
+                <groupId>com.sp.framework</groupId>
+                <artifactId>sp-framework-utilities</artifactId>
+                <version>${sp-common-utilities.version}</version>
             </dependency>
-            <!-- 永辉自定义ORM框架-lark -->
+            <!-- SuperSpace自定义ORM框架-lark -->
             <dependency>
-                <groupId>com.yh.common</groupId>
-                <artifactId>yh-lark-common</artifactId>
-                <version>${yh-lark-common.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.yh.common</groupId>
-                <artifactId>yh-lark-orm</artifactId>
-                <version>${yh-lark-orm.version}</version>
+                <groupId>com.sp.framework</groupId>
+                <artifactId>sp-framework-lark-common</artifactId>
+                <version>${sp-framework-lark-common.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.yh.common</groupId>
-                <artifactId>yh-lark-tool</artifactId>
-                <version>${yh-lark-tool.version}</version>
+                <artifactId>sp-framework-lark-orm</artifactId>
+                <version>${sp-framework-lark-orm.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.yh.common</groupId>
+                <artifactId>sp-framework-lark-tool</artifactId>
+                <version>${sp-framework-lark-tool.version}</version>
+            </dependency>
+
+            <!-- ========== 服务治理相关组件 ========== -->
+<!--            &lt;!&ndash; SuperSpace流量控制核心包 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.yh.traffic.core</groupId>-->
+<!--                <artifactId>sp-traffic-core-center</artifactId>-->
+<!--                <version>${sp-traffic-core-center.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash;限流/熔断组件-REST版本&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.degration</groupId>-->
+<!--                <artifactId>sp-infra-degration-rest-starter</artifactId>-->
+<!--                <version>${sp-degration-sdk.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash;REST Springboot限流/熔断组件&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.degration</groupId>-->
+<!--                <artifactId>sp-infra-degration-rest-boot-starter</artifactId>-->
+<!--                <version>${sp-degration-sdk.version}</version>-->
+<!--            </dependency>-->
+
+<!--            &lt;!&ndash;限流/熔断组件-Dubbo版本&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.degration</groupId>-->
+<!--                <artifactId>sp-infra-degration-dubbo-starter</artifactId>-->
+<!--                <version>${sp-degration-sdk.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash;REST Springboot限流/熔断组件&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.degration</groupId>-->
+<!--                <artifactId>sp-infra-degration-dubbo-boot-starter</artifactId>-->
+<!--                <version>${sp-degration-sdk.version}</version>-->
+<!--            </dependency>-->
+
+<!--            &lt;!&ndash;灰度/染色组件&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.sp.infra.flow.dyeing</groupId>-->
+<!--                <artifactId>sp-flow-dyeing-starter</artifactId>-->
+<!--                <version>${sp-flow-dyeing-sdk.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
-
-    <repositories>
-        <repository>
-            <id>nexus-releases</id>
-            <url>http://129.211.33.206:8088/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>https://repo.spring.io/libs-snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <url>http://129.211.33.206:8088/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>http://129.211.33.206:8088/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <build>
         <plugins>
