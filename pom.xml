@@ -7,52 +7,51 @@
     <groupId>com.sp.base</groupId>
     <artifactId>sp-base-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <description>SuperSpace基础依赖包定义集合</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.version>2.1.11.RELEASE</spring-boot.version>
+        <spring-boot.version>1.5.14.RELEASE</spring-boot.version>
 
         <!-- plugins version start-->
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-spring-boot-plugin.version>2.1.11.RELEASE</maven-spring-boot-plugin.version>
+        <maven-spring-boot-plugin.version>1.5.14.RELEASE</maven-spring-boot-plugin.version>
         <mybatis-generator-maven-plugin.version>1.3.5</mybatis-generator-maven-plugin.version>
         <git-commit-plugin.version>2.2.4</git-commit-plugin.version>
         <!-- plugins version end-->
 
-        <fastjson.version>1.2.60</fastjson.version>
-        <lombok.version>1.16.18</lombok.version>
-        <gson.version>2.8.6</gson.version>
-        <mysql.version>8.0.22</mysql.version>
-        <caffeine.version>2.8.8</caffeine.version>
-        <mybatis.version>3.5.6</mybatis.version>
+        <fastjson.version>1.2.35</fastjson.version>
+        <lombok.version>1.16.20</lombok.version>
+        <gson.version>2.8.0</gson.version>
+        <mysql.version>5.1.45</mysql.version>
+        <caffeine.version>2.3.5</caffeine.version>
+        <mybatis.version>3.4.5</mybatis.version>
         <mybatis-spring.version>2.0.6</mybatis-spring.version>
-        <mybatis-spring-boot-starter.version>2.2.0</mybatis-spring-boot-starter.version>
+        <mybatis-spring-boot-starter.version>1.2.0</mybatis-spring-boot-starter.version>
         <mybatis-plus-boot-starter.version>3.4.3.2</mybatis-plus-boot-starter.version>
         <mybatis-plus-generator.version>3.5.0</mybatis-plus-generator.version>
         <mybatis-plus-annotation.version>3.4.3.2</mybatis-plus-annotation.version>
         <mybatis-plus-join.version>1.2.0-SNAPSHOT</mybatis-plus-join.version>
-        <druid.version>1.1.10</druid.version>
+        <tk.mybatis.version>2.1.3</tk.mybatis.version>
+        <druid.version>1.0.26</druid.version>
+        <druid.spring.version>1.1.6</druid.spring.version>
         <persistence-api.version>1.0</persistence-api.version>
         <apollo.version>1.7.0</apollo.version>
         <jasypt.version>1.16</jasypt.version>
-        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
-        <spring-cloud-context.version>2.2.2.RELEASE</spring-cloud-context.version>
-        <consul-discovery.version>2.1.5.RELEASE</consul-discovery.version>
-        <netflix-hystrix.version>2.1.5.RELEASE</netflix-hystrix.version>
-        <openfeign.version>2.1.5.RELEASE</openfeign.version>
+        <spring-cloud.version>Dalston.SR2</spring-cloud.version>
+        <spring-cloud-context.version>1.2.3.RELEASE</spring-cloud-context.version>
+        <consul-discovery.version>1.2.1.RELEASE</consul-discovery.version>
+        <spring-cloud-starter-hystrix.version>1.3.2.RELEASE</spring-cloud-starter-hystrix.version>
+        <spring-cloud-starter-feign.version>1.3.2.RELEASE</spring-cloud-starter-feign.version>
         <json-lib.version>2.4</json-lib.version>
         <version.log4j2>2.17.0</version.log4j2>
         <version.slf4j-api>1.7.25</version.slf4j-api>
-        <guava.version>25.0-jre</guava.version>
-        <swagger2.version>2.9.2</swagger2.version>
-        <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
-        <springfox.version>2.9.2</springfox.version>
-        <swagger-annotations.version>1.5.20</swagger-annotations.version>
-        <springdoc-openapi-ui.version>1.5.10</springdoc-openapi-ui.version>
-        <knife4j-spring-boot-starter.version>3.0.2</knife4j-spring-boot-starter.version>
+        <guava.version>23.1-jre</guava.version>
+        <version.swagger>2.7.0</version.swagger>
+        <version.swagger-annotations>1.5.20</version.swagger-annotations>
+        <version.spring-boot-starter-swagger>1.5.1.RELEASE</version.spring-boot-starter-swagger>
         <dozer.version>5.5.1</dozer.version>
         <mockito-core.version>2.8.9</mockito-core.version>
         <powermock.version>1.7.3</powermock.version>
@@ -65,12 +64,12 @@
         <micrometer.version>1.6.2</micrometer.version>
         <apache-commons-csv.version>1.5</apache-commons-csv.version>
         <archaius-core.version>0.7.7</archaius-core.version>
-        <validation-api.version>2.0.1.Final</validation-api.version>
-        <commons.lang3.version>3.9</commons.lang3.version>
+        <validation-api.version>1.1.0.Final</validation-api.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
         <commons.lang.version>2.6</commons.lang.version>
         <commons.io.version>2.5</commons.io.version>
         <commons-beanutils.version>1.9.1</commons-beanutils.version>
-        <jetbrains.annotations.version>22.0.0</jetbrains.annotations.version>
+        <jetbrains.annotations.version>15.0</jetbrains.annotations.version>
         <javassist.version>3.18.0-GA</javassist.version>
         <poi.version>3.17</poi.version>
         <easyexcel.version>1.1.2-beat1</easyexcel.version>
@@ -79,19 +78,19 @@
         <zkclient.version>0.10</zkclient.version>
         <dubbo.version>2.5.5</dubbo.version>
         <dubbo-spring-boot-starter.version>2.0.0</dubbo-spring-boot-starter.version>
-        <spring-context-support.version>5.0.9.RELEASE</spring-context-support.version>
+        <spring-context-support.version>4.3.14.RELEASE</spring-context-support.version>
         <feign-form.version>3.0.3</feign-form.version>
-        <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
-        <spring-webmvc.version>5.1.12.RELEASE</spring-webmvc.version>
+        <javax-servlet-api.version>3.1.0</javax-servlet-api.version>
+        <spring-webmvc.version>4.3.14.RELEASE</spring-webmvc.version>
         <consul-client.version>0.16.5</consul-client.version>
-        <consul-api.version>1.4.5</consul-api.version>
+        <consul-api.version>1.2.2</consul-api.version>
         <version.disruptor>3.4.1</version.disruptor>
+        <aspectjweaver.version>1.8.9</aspectjweaver.version>
         <skywalking-client.version>8.4.0</skywalking-client.version>
         <jjwt.version>0.9.1</jjwt.version>
-        <cas-client-spring-boot-starter.version>1.0.0</cas-client-spring-boot-starter.version>
         <rocketmq-client.version>4.3.0</rocketmq-client.version>
         <ttl.version>2.10.2</ttl.version>
-        <sp-middleware-dependencies.version>1.0.0-SNAPSHOT</sp-middleware-dependencies.version>
+        <cas-client-spring-boot-starter.version>1.0.0</cas-client-spring-boot-starter.version>
 
         <!-- 公共组件版本定义 -->
         <sp-framework-common.version>1.0.0-SNAPSHOT</sp-framework-common.version>
@@ -101,16 +100,16 @@
         <sp-framework-redis.version>1.0.0-SNAPSHOT</sp-framework-redis.version>
         <sp-framework-web.version>1.0.0-SNAPSHOT</sp-framework-web.version>
         <sp-framework-utilities.version>1.0.0-SNAPSHOT</sp-framework-utilities.version>
-<!--        <sp-middleware-dependencies.version>1.2.20.1</sp-middleware-dependencies.version>-->
+<!--        <sp-middleware-dependencies.version>1.0.0-SNAPSHOT</sp-middleware-dependencies.version>-->
 
         <!-- 服务治理相关组件版本定义 -->
-        <sp-infra-svc-gov-sdk.version>1.0.0-SNAPSHOT</sp-infra-svc-gov-sdk.version>
-        <sp-infra-consul-retry-client.version>1.0.0-SNAPSHOT</sp-infra-consul-retry-client.version>
-        <sp-infra-metrics-client.version>1.0.0-SNAPSHOT</sp-infra-metrics-client.version>
-        <arch-web-sc-interfaces-list.version>1.0.0-SNAPSHOT</arch-web-sc-interfaces-list.version>
-        <dubbo-extension-svcls.version>1.0.0-SNAPSHOT</dubbo-extension-svcls.version>
-        <sp-degration-sdk.version>1.0.0-SNAPSHOT</sp-degration-sdk.version>
-        <sp-flow-dyeing-sdk.version>1.0.0-SNAPSHOT</sp-flow-dyeing-sdk.version>
+        <sp-infra-svc-gov-sdk.version>1.1.0-SNAPSHOT</sp-infra-svc-gov-sdk.version>
+        <sp-infra-consul-retry-client.version>1.1.0-SNAPSHOT</sp-infra-consul-retry-client.version>
+        <sp-infra-metrics-client.version>1.1.0-SNAPSHOT</sp-infra-metrics-client.version>
+        <arch-web-sc-interfaces-list.version>1.5.0-SNAPSHOT</arch-web-sc-interfaces-list.version>
+        <dubbo-extension-svcls.version>1.5.0-SNAPSHOT</dubbo-extension-svcls.version>
+        <sp-degration-sdk.version>1.1.0-SNAPSHOT</sp-degration-sdk.version>
+        <sp-flow-dyeing-sdk.version>1.1.0-SNAPSHOT</sp-flow-dyeing-sdk.version>
         <sp-traffic-core-center.version>1.0.0-SNAPSHOT</sp-traffic-core-center.version>
     </properties>
 
@@ -121,6 +120,11 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context-support</artifactId>
                 <version>${spring-context-support.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+                <version>${consul-discovery.version}</version>
             </dependency>
 
             <!-- ========== SpringMVC & Springboot相关依赖包 ========== -->
@@ -147,18 +151,13 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-                <version>${netflix-hystrix.version}</version>
+                <artifactId>spring-cloud-starter-hystrix</artifactId>
+                <version>${spring-cloud-starter-hystrix.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${openfeign.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-gateway</artifactId>
-                <version>${spring-cloud-gateway.version}</version>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>${spring-cloud-starter-feign.version}</version>
             </dependency>
 
             <dependency>
@@ -253,6 +252,16 @@
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>${validation-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectjweaver.version}</version>
             </dependency>
 
             <!-- 序列化组件依赖包 -->
@@ -372,7 +381,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
+                <version>${druid.spring.version}</version>
             </dependency>
 
             <!-- Mybatis相关依赖包 -->
@@ -389,7 +398,7 @@
             <dependency>
                 <groupId>tk.mybatis</groupId>
                 <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>2.1.3</version>
+                <version>${tk.mybatis.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -446,40 +455,29 @@
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger2.version}</version>
+                <version>${version.swagger}</version>
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox.version}</version>
+                <version>${version.swagger}</version>
             </dependency>
-
             <dependency>
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
-                <version>${swagger-annotations.version}</version>
+                <version>${version.swagger-annotations}</version>
             </dependency>
-
-            <!--Springboot依赖Swagger相关包(适用于Springboot 2.2.0以上) -->
             <dependency>
                 <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${springfox.version}</version>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${version.swagger}</version>
             </dependency>
+
+            <!--Springboot依赖Swagger相关包 -->
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>${knife4j-spring-boot-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-springdoc-ui</artifactId>
-                <version>${knife4j-spring-boot-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${springdoc-openapi-ui.version}</version>
+                <groupId>com.spring4all</groupId>
+                <artifactId>spring-boot-starter-swagger</artifactId>
+                <version>${version.spring-boot-starter-swagger}</version>
             </dependency>
 
             <!-- ========== Dozer工具依赖 ========== -->
@@ -490,7 +488,6 @@
             </dependency>
 
             <!-- ========== log4j2日志包依赖 ========== -->
-            <!-- 原生log4j2主包 -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
