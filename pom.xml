@@ -83,7 +83,7 @@
         <feign-form.version>3.0.3</feign-form.version>
         <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
         <spring-webmvc.version>5.1.12.RELEASE</spring-webmvc.version>
-        <consul-client.version>0.16.5</consul-client.version>
+        <consul-client.version>1.5.3</consul-client.version>
         <consul-api.version>1.4.5</consul-api.version>
         <version.disruptor>3.4.1</version.disruptor>
         <skywalking-client.version>8.4.0</skywalking-client.version>
