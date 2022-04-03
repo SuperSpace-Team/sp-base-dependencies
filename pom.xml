@@ -91,6 +91,7 @@
         <rocketmq-client.version>4.3.0</rocketmq-client.version>
         <ttl.version>2.10.2</ttl.version>
         <cas-client-spring-boot-starter.version>1.0.0</cas-client-spring-boot-starter.version>
+        <hutool-all.version>5.6.4</hutool-all.version>
 
         <!-- 公共组件版本定义 -->
         <sp-framework-common.version>1.0.0-SNAPSHOT</sp-framework-common.version>
@@ -557,7 +558,11 @@
                 <artifactId>transmittable-thread-local</artifactId>
                 <version>${ttl.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
 
             <!-- ========== 服务治理相关组件 ========== -->
 <!--            &lt;!&ndash; 服务治理SDK,接入手册: &ndash;&gt;-->
