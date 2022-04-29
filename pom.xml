@@ -649,12 +649,12 @@
                 <version>${sp-framework-lark-common.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.common</groupId>
+                <groupId>com.sp.framework</groupId>
                 <artifactId>sp-framework-lark-orm</artifactId>
                 <version>${sp-framework-lark-orm.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.yh.common</groupId>
+                <groupId>com.sp.framework</groupId>
                 <artifactId>sp-framework-lark-tool</artifactId>
                 <version>${sp-framework-lark-tool.version}</version>
             </dependency>
